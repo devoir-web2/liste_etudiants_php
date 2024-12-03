@@ -27,6 +27,10 @@ $etudiants = $etudiantsStatement->fetchAll();
             <th>ID</th>
             <th>Nom</th>
             <th>Prénoms</th>
+            <th>Genre</th>
+            <th>Email</th>
+            <th>Quartier</th>
+            <th>Contact</th>
             <th>Actions</th>
         </tr>
         <?php foreach ($etudiants as $etudiant): ?>
@@ -34,10 +38,14 @@ $etudiants = $etudiantsStatement->fetchAll();
             <td><?php echo $etudiant['id']; ?></td>
             <td><?php echo $etudiant['nom']; ?></td>
             <td><?php echo $etudiant['prenoms']; ?></td>
+            <td><?php echo $etudiant['genre']; ?></td>
+            <td><?php echo $etudiant['email']; ?></td>
+            <td><?php echo $etudiant['quartier']; ?></td>
+            <td><?php echo $etudiant['contact']; ?></td>
             <td>
-                <a href="details_etudiant.php?id_etudiant=<?php echo $etudiant['id']; ?>">Voir plus</a>
-                <a href="modifier_etudiant.php?id_etudiant=<?php echo $etudiant['id']; ?>">Modifier</a>
-                <a href="supprimer_etudiant.php?id_etudiant=<?php echo $etudiant['id']; ?>">Supprimer</a>
+                <th><a href="details_etudiant.php?id_etudiant=<?php echo $etudiant['id']; ?>">Voir plus</a></th>
+                <th><a href="modifier_etudiant.php?id_etudiant=<?php echo $etudiant['id']; ?>">Modifier</a></th>
+                <th><a href="supprimer_etudiant.php?id_etudiant=<?php echo $etudiant['id']; ?>">Supprimer</a></th>
             </td>
         </tr>
         <?php endforeach; ?>
