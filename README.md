@@ -6,7 +6,7 @@ try {
     die('Erreur : ' . $e->getMessage());
 }
 
-// Récupérer tous les étudiants
+// Récupérer tous les étudiants 
 $sqlQuery = 'SELECT * FROM etudiants';
 $etudiantsStatement = $db->prepare($sqlQuery);
 $etudiantsStatement->execute();
